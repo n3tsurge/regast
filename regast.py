@@ -42,7 +42,11 @@ for f in files:
                 for search in sig.patterns:
                     matches = re.findall(r'(^.*'+escape_special(search)+'.*)', line, re.DOTALL)
                     if(matches):
-                        print('[!] Possible code issue in {} on line {}. {} Line content: \'{}\''.format(f, line_num, sig.issue, line.strip()))
+                        print('[!] Possible code issue in {} on line {}.'.format(f, line_num))
+                        print('[-] ^<ESC^>[46m [46mLine: {}[0m'.format(line.strip()))
+                        print('[-] Description: {}'.format(sig.issue))
+                        print(' ')
+                        #print('[!] Possible code issue in {} on line {}. {} Line content: \'{}\''.format(f, line_num, sig.issue, line.strip()))
                         findings += 1
             line_num += 1
         t.close()

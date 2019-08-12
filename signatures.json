@@ -1,0 +1,92 @@
+[
+    {
+        "category": "pwd",
+        "patterns": [
+            "password",
+            "passwd",
+            "credential",
+            "passphrase"
+        ],
+        "issue": "Detected potentially hardcoded password."
+    },
+    {
+        "category": "rce/injection",
+        "patterns": [
+            "eval(",
+            "exec("
+        ],
+        "issue": "Dangerous functions may allow remote code injection/execution."
+    },
+    {
+        "category": "sqli",
+        "patterns": [
+            "sql",
+            "query("
+        ],
+        "issue": "Certain SQL calls may allow for SQL Injection."
+    },
+    {
+        "category": "dangerous",
+        "patterns": [
+            "strcat",
+            "strcpy",
+            "strncat",
+            "strncpy",
+            "sprintf",
+            "gets"
+        ],
+        "issue": "Dangerous functions may allow remote code injection/execution."
+    },
+    {
+        "category": "hashing",
+        "patterns": [
+            "md5",
+            "sha1",
+            "sha-1"
+        ],
+        "issue": "Deprecated hashing functions."
+    },
+    {
+        "category": "crypto",
+        "patterns": [
+            "3des",
+            "des3",
+            "tripledes"
+        ],
+        "issue": "Deprecated encryption functions."
+    },
+    {
+        "category": "cipher",
+        "patterns": [
+            "rc4",
+            "arcfour"
+        ],
+        "issue": "Deprecated stream cipher functions."
+    },
+    {
+        "category": "insecure-transport",
+        "patterns": [
+            "htpp:",
+            "ftp",
+            "--insecure",
+            "ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };",
+            "checkCertificateName=.*false.*"
+        ],
+        "issue": "Insecure transport methods could allow for snooping or man-in-the-middle attacks."
+    },
+    {
+        "category": "javascript-xss",
+        "patterns": [
+            "dangerouslySetInnerHTML",
+            "trustAsHtml"
+        ],
+        "issue": "Potential XSS issue."
+    },
+    {
+        "category": "javascript-crypto",
+        "patterns": [
+            "Math.random("
+        ],
+        "issue": "Potential Crpytographic issue."
+    }
+]

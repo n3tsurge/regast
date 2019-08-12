@@ -2,7 +2,11 @@
 Regular Expression based Application Security Scanning Tool
 
 ## What is it?
-Regast is a Regular Expression based Application Security scanning tool.  Why pay tons of money when you can just use regex to look for no brainer issues
+Regast is a Regular Expression based Application Security scanning tool.  Why pay tons of money when you can just use regex to look for no brainer issues.
+
+There may be some false positives, but it's better than nothing.  And the signatures can be tweaked! Just edit signatures.json!
+
+![](regast.gif)
 
 ## How to use
 
